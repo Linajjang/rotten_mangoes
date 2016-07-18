@@ -1,14 +1,13 @@
-Rails.application.routes.draw do
-  get 'sessions/new'
+RottenMangoes::Application.routes.draw do
 
-  get 'sessions/create'
+  get 'reviews/new'
 
-  get 'users/new'
+  get 'reviews/create'
 
-  get 'users/create'
+      resources :movies do
+        resources :reviews, only: [:new, :create]
+      end
+      resources :users, only: [:new, :create]
+      resources :sessions, only: [:new, :create, :destroy]
 
-  resources :movies
-  resources :users, only: [:new, :create]
-  resources :sessions, only: [:new, :create]
-  resources :sessions, only: [:new, :create, :destroy]
-end
+    end
