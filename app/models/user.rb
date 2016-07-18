@@ -6,4 +6,7 @@ class User < ApplicationRecord::Base
 
   end
 
+  def full_name
+    "#{firstname} #{lastname}"
+  end
 end
