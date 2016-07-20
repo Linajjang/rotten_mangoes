@@ -1,5 +1,6 @@
 RottenMangoes::Application.routes.draw do
-  
+
+  resources :posts
   resources :movies do
     resources :reviews, only: [:new, :create]
   end

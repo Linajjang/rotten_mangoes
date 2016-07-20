@@ -1,0 +1,2 @@
+module NamespaceName::ControllerNameHelper
+end

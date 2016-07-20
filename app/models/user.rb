@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_many :reviews
 
   has_secure_password
@@ -19,5 +18,4 @@ class User < ApplicationRecord
   def full_name
     "#{firstname} #{lastname}"
   end
-
 end
