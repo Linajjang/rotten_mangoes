@@ -50,3 +50,4 @@ gem 'bcrypt-ruby'
 
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick'
+gem 'kaminari'

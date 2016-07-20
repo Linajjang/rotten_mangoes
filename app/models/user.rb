@@ -15,6 +15,8 @@ class User < ApplicationRecord
   validates :password,
    length: { in: 6..20 }, on: :create
 
+   paginates_per 50
+
   def full_name
     "#{firstname} #{lastname}"
   end
