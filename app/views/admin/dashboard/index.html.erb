@@ -1,6 +1,13 @@
-<h1>Administration</h1>
+<%= form_tag edit_multiple_admin_index_path do |f| %>
+<table>
+  <% @users.each do |user| %>
+  <% if !user.public %>
+  <tr>  
+    <td><%= check_box_tag "user_ids[]", user.id %></td>
+  </tr>
+  <% end %>
+  <% end %>
+</table>
 
-<ul>
-  <li><%= link_to 'Manage Users' %></li>
-  <li><%= link_to 'Manage Articles' %></li>
-</ul>
+<%= submit_tag "Edit Checked" %>
+<% end %>

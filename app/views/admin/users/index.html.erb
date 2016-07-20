@@ -1,0 +1,7 @@
+<h1>Rotten Mangoes</h1>
+<%= link_to "Submit a movie!", new_user_path %>
+<hr>
+<% @users.each do |user| %>
+  <h2><%= link_to user.firstname, users_path(:user) %></h2>
+  <h4><%= link_to user.email, users_path(user) %></h4>
+<% end %>

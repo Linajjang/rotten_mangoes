@@ -18,8 +18,6 @@ class MoviesController < ApplicationController
       end
 
       def create
-        puts "-------------------"
-        puts movie_params
         @movie = Movie.new(movie_params)
 
         if @movie.save
